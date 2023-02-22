@@ -4,8 +4,8 @@
 
     --White: hsl(0, 0%, 100%);
     --Very-light-grayish-blue: hsl(210, 60%, 98%);
-    --Light-grayish-blue-1: hsl(211, 68%, 94%); /*  unread notification */
-    --Light-grayish-blue-2: hsl(205, 33%, 90%); /* message hover  */
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
     --Grayish-blue: hsl(219, 14%, 63%);
     --Dark-grayish-blue: hsl(219, 12%, 42%);
     --Very-dark-blue: hsl(224, 21%, 14%);
@@ -26,6 +26,7 @@ html, body {
 img {
     display: block;
     max-width: 100%;
+    cursor: pointer;
 }
 
 a {
@@ -38,11 +39,22 @@ body {
     flex-direction: column;
     gap: 2rem;
     background-color: var(--Very-light-grayish-blue);
+    align-items: center;
+}
+
+@media (min-width: 600px) {
+    body {
+        justify-content: center;
+    }
 }
 
 .main-container {
     background-color: var(--White);
     padding: 2rem 1.5rem;
+    max-width: 607px;
+    -webkit-box-shadow: 0px 3px 9px 15px rgba(0,0,0,0.01);
+    -moz-box-shadow: 0px 3px 9px 15px rgba(0,0,0,0.01);
+    box-shadow: 0px 3px 9px 15px rgba(0,0,0,0.01);
 }
 
 .top-bar {
@@ -97,10 +109,11 @@ h1 {
     gap: 1rem;
     border-radius: 0.3rem;
     padding: 1rem;
+    cursor: pointer;
 }
 
 .profile-picture {
-    height: 45px;
+    height: 40px;
     aspect-ratio: 1;
 }
 
@@ -164,9 +177,8 @@ p {
 .private-message {
     border: 1px solid var(--Light-grayish-blue-2);
     border-radius: 0.2rem;
-    padding: 1rem;
-    margin-left: 75px;
-    margin-top: -15px;
+    padding: 1.3rem;
+    margin: -15px 16px 0 68px;
 }
 
 .private-message:hover {
@@ -174,6 +186,20 @@ p {
     cursor: pointer;
 }
 
+.flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.chess-img {
+    height: 40px;
+}
+
+.smith {
+    justify-content: space-between;
+}
+
 .attribution {
     text-align: center;
 }
+
